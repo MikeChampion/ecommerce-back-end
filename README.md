@@ -24,6 +24,8 @@ Fork it, clone it, from the terminal 'npm i' will install the dotenv, express, s
 
 Connect your terminal to mysql and run 'db/source schema.sql' to initialize the database. Then run 'npm run seed' to seed the database with starter inventory and 'npm start' to run the app. This will use localhost:3001/api/ (categories or products or tags)
 
+<a href="https://drive.google.com/file/d/1doiB-P5QChwggHCwPRYzLiukJTUekNsQ/view" target="_blank">Demo video</a>
+
 ### Project Screenshot
 
 ![E-commerce back end screenshot 1](./assets/images/screenshot.png)
