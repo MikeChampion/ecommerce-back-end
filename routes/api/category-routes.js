@@ -40,13 +40,15 @@ router.post("/", async (req, res) => {
             category_name: req.body.category_name,
         });
 
-        res.status(200).json(newCategory);
+        res.status(200).json({
+            message: "Category created!",
+        });
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
-// UPDATE A CATEGORY
+// UPDATE CATEGORY NAME
 router.put("/:id", async (req, res) => {
     const cat_id = req.params.id;
     const { category_name } = req.body;
@@ -55,7 +57,9 @@ router.put("/:id", async (req, res) => {
             { category_name: category_name },
             { where: { id: cat_id } }
         );
-        res.status(200).json("Object updated");
+        res.status(200).json({
+            message: "Category updated!",
+        });
     } catch (err) {
         res.status(400).json(err);
     }
@@ -77,7 +81,9 @@ router.delete("/:id", async (req, res) => {
             return;
         }
 
-        res.status(200).json(categoryData);
+        res.status(200).json({
+            message: "Category deleted!",
+        });
     } catch (err) {
         res.status(500).json(err);
     }

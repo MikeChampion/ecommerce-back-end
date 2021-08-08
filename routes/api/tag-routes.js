@@ -23,7 +23,7 @@ router.get("/:id", async (req, res) => {
         });
         if (!tagData) {
             res.status(404).json({
-                message: "No category found with this id!",
+                message: "No tag found with this id!",
             });
             return;
         }
@@ -40,7 +40,9 @@ router.post("/", async (req, res) => {
             tag_name: req.body.tag_name,
         });
 
-        res.status(200).json(tagData);
+        res.status(200).json({
+            message: "Tag created!",
+        });
     } catch (err) {
         res.status(400).json(err);
     }
@@ -52,7 +54,9 @@ router.put("/:id", async (req, res) => {
     const { tag_name } = req.body;
     try {
         await Tag.update({ tag_name: tag_name }, { where: { id: tag_id } });
-        res.status(200).json("Tag updated");
+        res.status(200).json({
+            message: "Tag updated!",
+        });
     } catch (err) {
         res.status(400).json(err);
     }
@@ -69,12 +73,13 @@ router.delete("/:id", async (req, res) => {
 
         if (!tagData) {
             res.status(404).json({
-                message: "No category found with this id!",
+                message: "No tag found with this id!",
             });
             return;
         }
-
-        res.status(200).json(tagData);
+        res.status(200).json({
+            message: "Tag deleted!",
+        });
     } catch (err) {
         res.status(500).json(err);
     }
