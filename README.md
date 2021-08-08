@@ -27,11 +27,10 @@ Connect your terminal to mysql and run 'db/source schema.sql' to initialize the 
 ### Project Screenshot
 
 ![E-commerce back end screenshot 1](./assets/images/screenshot.png)
-![E-commerce back end screenshot 2](./assets/images/screenshot2.png)
 
 ### Credits
 
-This NodeJS project uses <a href="https://www.npmjs.com/package/express" target="_blank">express</a>, <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a> to secure environment variables, <a href="https://www.npmjs.com/package/sequelize" target="_blank">Sequelize</a> to work with the database, and <a href="https://www.npmjs.com/package/mysql2" target="_blank">mysql2</a> to connect to the database.
+This NodeJS project uses <a href="https://www.npmjs.com/package/express" target="_blank">express</a> for the server, <a href="https://www.npmjs.com/package/dotenv" target="_blank">dotenv</a> to secure environment variables, <a href="https://www.npmjs.com/package/sequelize" target="_blank">Sequelize</a> to work with the database, and <a href="https://www.npmjs.com/package/mysql2" target="_blank">mysql2</a> to connect to the database.
 
 ## <a id="contribution-guidelines">IV. Contribution Guidelines</a>
 
